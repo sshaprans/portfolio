@@ -1,173 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="SShapran">
+    <link href="./svg/icon.svg" rel="shortcut icon" type="imeg/x-icon">
+
     <link rel="stylesheet" href="styles.css">
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
-      crossorigin="anonymous"
-    />
     <title>Portfolio SS</title>
 </head>
 <body>
-    <header class="">
-       <div class="wrapper" >
-        <div class="header">
-            <a class="logo-link" href="#">
-                <img class="logo-img" src="https://i.ibb.co/0KpNC3C/logo2.png" alt="logo">
-            </a>
-            <nav id="navbar">
-                <ul class="navbar-list">
-                    <li>
-                        <a class="navbar-link" href="#welcome-section">About</a>
-                    </li>
-                    <li>
-                        <a class="navbar-link" href="#projects">Projects</a>
-                    </li>
-                    <li>
-                        <a class="navbar-link" href="#contacts">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-       </div>
-    </header>
-    
-    
-    <!-- about -->
-    <section class="" id="welcome-section">
-        <div class="wrapper">
-            <div class="welcome-section">
-                <div class="welcome-left">
-                    <h1 class="welcome-title">Hi I am Serhii</h1>
-                    <h3 class="welcome-title-down">front-end developer</h3>
-                    <p class="welcome-text">Freelance exp 2 years. Full site layout (HTML5, CSS3, Js), landing page, emails, adaptability development. Independent study of web development, the js and the React framework.</p>
-                    <div class="skills">
-                        <div class="hard-skills">
-                            <h3 class="title-skills">Hard skills</h3>
-                            <ul class="skills-list">
-                                <li>HTML5 (mjml)</li>
-                                <li>CSS3 (SASS, Flexbox, Grid layout)</li>
-                                <li>Bootstrap</li>
-                                <li>BEM</li>
-                                <li>Javascript(ES6+, jquery, React)</li>
-                                <li>Git</li>
-                                <li>Firebase</li>
-                                <li>Figma, Avocode</li>
-                                <li>Codepen</li>
+    <div id="wrap">
+        <header>
+            <div class="container">
+                <nav>
+                    <a href="#">
+                        <svg width="94" height="50" viewBox="0 0 94 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.25611 49.0042L17.2043 23.8054L26.5885 9.97365e-08L20.3324 0.0676513L10.9643 23.8054L0 49.0042H6.25611Z" fill="#C26047"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M73.2274 14.5609C73.2272 12.4655 74.9539 11.6594 77.8138 11.6592C81.9149 11.6589 87.0952 12.8943 91.1963 15.097L91.1955 2.47063C86.7166 0.697872 82.2918 -0.000304677 77.8131 9.97365e-08C66.859 0.000745518 59.5747 5.69652 59.5753 15.2066C59.5763 30.0358 80.0812 27.6703 80.0817 34.0641C80.0818 36.5356 77.9235 37.3417 74.9017 37.3419C70.4229 37.3422 64.7029 35.5158 60.1701 33.0446L60.1709 45.8321C65.1894 47.9809 70.2618 48.894 74.9024 48.8937C86.1263 48.8929 93.8423 43.3583 93.8416 33.7408C93.7866 17.7295 73.2278 20.5785 73.2274 14.5609Z" fill="#C26047"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M38.7177 14.6413C38.7176 12.544 40.4443 11.7373 43.3042 11.7371C47.4052 11.7368 52.5855 12.9733 56.6867 15.1778L56.6858 2.54041C52.207 0.766106 47.7822 0.0673192 43.3034 0.0676262C32.3494 0.0683772 25.0651 5.76916 25.0657 15.2875C25.0667 30.1298 45.5716 27.7622 45.572 34.1616C45.5722 36.6353 43.4138 37.4421 40.392 37.4423C35.9132 37.4426 30.1933 35.6146 25.6604 33.1412L25.6613 45.9399C30.6798 48.0906 35.7521 49.0045 40.3928 49.0042C51.6166 49.0034 59.3326 43.4639 59.332 33.838C59.277 17.8127 38.7181 20.6642 38.7177 14.6413Z" fill="#C26047"/>
+                        </svg>
+                    </a>
+                    <ul class="header_list">
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li>
+                            <a href="#project">Projects</a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section id="banner">
+                <div class="container">
+                    <div class="banner">
+                        <div class="banner-up">
+                            <picture>
+                                <source srcset="./photo.webp">
+                                <img src="photo.jpg">
+                            </picture>
+                            <div class="banner-text">
+                                <h1 class="title">I’m Serhii</h1>
+                                <p class="sup-title">frontend developer</p>
+                                <p>
+                                    Since 2019, I've been working as a freelancer, specializing in creating websites, web applications, email template designs, and implementing animations on websites. I also have experience working with various Content Management Systems (CMS), which allows me to easily adapt to project needs. I'm a fast learner and always open to new challenges. I'm ready to join a team to participate in large projects and learn something new. Let's create something extraordinary together!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="banner-down">
+                            <div class="banner-info">
+                                <p class="info-row"><span>location</span>Kyiv</p>
+                                <p class="info-row"><span>age</span>29</p>
+                                <p class="info-row" ><span>tel</span><a href="tel:+380673540335"> +38(067)-35-403-35</a></p>
+                                <p class="info-row" ><span>email</span><a href="mailto:sshaprans@gmail.com"> sshaprans@gmail.com</a></p>
 
-                            </ul>
-                        </div>
-                        <div class="soft-skills">
-                            <h3 class="title-skills">Soft skills</h3>
-                            <ul class="skills-list">
-                                <li>Adaptability</li>
-                                <li>Self management</li>
-                                <li>Stress tolerance</li>
-                                <li>Teamwork</li>
-                                <li>Team management</li>
-                                <li>Communication</li>
-                            </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="welcome-right">
-                    <img class="welcome-img" src="https://i.ibb.co/31JGLRY/photo.jpg" alt="photo">
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- projects -->
-    <section class="" id="projects">
-        <div class="wrapper">
-            <div class="projects">
-                <h3 id="projects-title">These are some of my projects</h3>
-       
-                <div class="project-items">
-                    <a class="project-link" href="https://codepen.io/sshaprans/pen/zYLWwgJ" target="_blank">
-                        <img class="project-img" src="https://i.ibb.co/XWF9KNj/mini-product-landing-page.jpg" alt="product landing page">
-                        <p class="project-tile">
-                            Product landing page
-                        </p>
-                    </a>
-                    <a class="project-link" href="https://codepen.io/sshaprans/pen/ZEjxRwa" target="_blank">
-                        <img class="project-img" src="https://i.ibb.co/VMwnVZV/technical1.jpg" alt="technical documentation">
-                        <p class="project-tile">Technical documentation</p>
-                    </a>
-                    <a class="project-link" href="https://codepen.io/sshaprans/pen/vYajEMR" target="_blank">
-                        <img class="project-img" src="https://i.ibb.co/vQmLzbp/mailing.jpg" alt="mailing page">
-                        <p class="project-tile">Mailing page</p>
-                    </a>
-                    <a class="project-link" href="https://codepen.io/sshaprans/pen/MWBVBwQ" target="_blank">
-                        <img class="project-img" src="https://i.ibb.co/JvyDGnJ/snake1.jpg" alt="snake">
-                        <p class="project-tile">Snake 2D</p>
-                    </a>
-                    <a class="project-link" href="https://codepen.io/sshaprans/pen/yLqKEmz" target="_blank">
-                        <img class="project-img" src="https://i.ibb.co/2hZRBN4/memory.jpg" alt="tribute page">
-                        <p class="project-tile">Tribute page</p>
-                    </a>
-                    <a class="project-link" href="https://codepen.io/sshaprans/pen/bGjvKQp" target="_blank">
-                        <img class="project-img" src="https://i.ibb.co/pLkFyGX/picasso.jpg" alt="picasso painting">
-                        <p class="project-tile">Picasso painting</p>
-                    </a>
-                    <a class="project-link" href="https://codepen.io/sshaprans/pen/KKBoeYm" target="_blank">
-                        <img class="project-img" src="https://i.ibb.co/LvNfQNc/city.jpg" alt="painting city">
-                        <p class="project-tile">Painting city</p>
-                    </a>
-                    <a class="project-link" href="https://codepen.io/sshaprans/pen/VwBXdOO" target="_blank">
-                        <img class="project-img" src="https://i.ibb.co/FHP9TQR/magazine.jpg" alt="magazine page">
-                        <p class="project-tile">Magazine page</p>
-                    </a>
-                    <a class="project-link" href="https://codepen.io/sshaprans/pen/RwBMBNw" target="_blank">
-                        <img class="project-img" src="https://i.ibb.co/QvYFCjH/penguin1.jpg" alt="penguin">
-                        <p class="project-tile">Animation penguin</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- contacts -->
-    <section class="" id="contacts">
-        <div class="wrapper">
-            <div class="contacts">
-                <h1 class="title-contacts">Let`s try working</h1>
-                <h3 class="titel-contacts-down">
-                    for contact with me
-                </h1>
-                <div class="contacts-link">
-                    <a id="profile-link" class="contact-link" href="https://github.com/sshaprans" target="_blank"><i class="fab fa-github"></i> Git
-                    </a>
-                    <a class="contact-link" href="https://www.facebook.com/sshaprans" target="_blank">
-                        <i class="fab fa-facebook-square"></i> Facebook
-                    </a>
-                    <a class="contact-link" href="https://www.linkedin.com/in/sergey-shapran-29690524a/" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a>
-                    <a class="contact-link" href="https://www.freecodecamp.org/SShapran" target="_blank"><i class="fab fa-free-code-camp"></i> FreeCodeCamp</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer id="footer">
-        <div class="wrapper">
-            <div class="footer">
-                <address>
-                    <div class="address-left">
-                        <p>Kyiv, Ukraine</p>
-                    </div>
-                    <div class="address-right">
-                        <p>telegram: @sshapran</p>
-                        <p>tel: 067-35-403-35</p>
-                    </div>
-                </address>
-                
-                <p> © Created by SS 01.2023</p>
-            </div>
-        </div>
+            </section>
+        </main>
+    </div>
+
+
+    <footer>
+        <p>footer </p>
     </footer>
 </body>
 </html>
