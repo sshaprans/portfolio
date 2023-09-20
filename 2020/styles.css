@@ -200,7 +200,7 @@ margin-bottom: 1.5rem;
     transform: scale(1.1);
     background-color:var(--colorRed-1);
 }
-.project-img{
+.project_img{
     margin: 10px 20px;
     border-radius: 13px;
 }
