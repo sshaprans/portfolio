@@ -42,10 +42,8 @@ body {
     flex-direction: column;
 }
 main {
-    padding-bottom: 100px;
     flex: 1 1 auto;
 }
 footer {
-    margin-top: -100px;
-    height: 100px;
+    min-height: 100px;
 }

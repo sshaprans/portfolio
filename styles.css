@@ -189,7 +189,6 @@ main{
     width: calc(100% + 38px);
     padding-left: 19px;
     text-align: center;
-    margin-bottom: 83px;
 }
 .hard-list{
     width: 100%;
@@ -197,6 +196,7 @@ main{
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 17px 21px;
+    margin-bottom: 83px;
 }
 .hard-list>li{
     padding: 0 40px;
@@ -234,16 +234,21 @@ main{
     display: flex;
     flex-wrap: wrap;
     gap: 55px;
+    justify-content: space-between;
+    margin-bottom: 75px;
 }
 .project_picture{
     width: calc(100% / 3 - 55px);
     position: relative;
     height: initial;
     transition: all .3s ease-in-out;
+    border-radius: 20px;
+
 }
 .project_picture:hover{
     scale: 1.03;
     transform: translateY(-10px);
+    box-shadow: -10px 15px 50px 0 rgba(255, 255, 255, 0.31), 10px 10px 50px 0 rgba(255, 255, 255, 0.25);
 }
 .project_picture>picture{
     width: 100%;
@@ -255,4 +260,120 @@ main{
     object-fit: cover;
     display: block;
     border-radius: 20px;
+}
+.project_down{
+    text-align: center;
+}
+.btn--project{
+    padding: 17px 80px 17px 27px;
+    position: relative;
+}
+.btn--project::after{
+    content: "";
+    position: absolute;
+    background-image: url("./svg/Arrow 1.svg");
+    background-size: cover;
+    width: 46px;
+    height: 23px;
+    top: 33%;
+    right: 17px;
+}
+.sup-title--project{
+    margin: 145px 0 81px 0;
+}
+/*project end*/
+/*contacts*/
+
+#contacts{
+    background-color: var(--dark);
+    padding: 102px 0;
+    margin: 0 0 133px 38px;
+    border-radius: 39px 0 0 39px;
+}
+.contacts{
+    /*width: calc(100% + 38px);*/
+    padding-right: 19px;
+    text-align: center;
+}
+.contacts_svg{
+    color: var(--white-text);
+    fill:var(--white-text);
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+}
+.contacts_info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 90px 0 100px;
+}
+.contacts_info_block{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    text-align: left;
+}
+.contacts_info_block_text{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.contacts_info_block_text>p,
+.contacts_info_block_text>a{
+    font-family: var(--font-text);
+}
+.contacts_info_block_text>a{
+    text-decoration: underline;
+    transition: all .3s ease-in-out;
+}
+.contacts_info_block_text>a:hover{
+    transform: translateY(-5px);
+}
+.social_list{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+}
+.contact-link{
+    display: flex;
+    font-size: 46px;
+    fill: var(--white-text);
+    width: 50px;
+    height: fit-content;
+    object-fit: fill;
+    transition: all .3s ease-in-out;
+}
+.contact-link:hover{
+    transform: translateY(-5px);
+    scale: 1.05;
+}
+/*contacts end*/
+#footer{
+    background: linear-gradient(180deg, #212021 0%, #2B2A2B 100%);
+    padding: 40px 0;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer_svg{
+    fill: var(--white-text);
+    width: 50px;
+    transition: all .3s ease-in-out;
+}
+.footer_svg:hover{
+    animation: footer_svg 1s infinite linear;
+
+}
+@keyframes footer_svg{
+    0%{
+        transform: translateY(8px);
+    }
+    100%{
+        transform: translateY(-7px);
+    }
 }
