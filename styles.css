@@ -11,6 +11,8 @@
 body{
     color: var(--white-text);
     font-size: 22px;
+    z-index: 20;
+    display: block;
 }
 .container{
     width: 100%;
@@ -36,6 +38,40 @@ body{
     line-height: 61px;
     margin-bottom: 18px;
 }
+.mobile_menu,
+.btn_burger{
+    display: none;
+}
+.btn_burger {
+    appearance: none;
+    outline: none;
+    background: transparent;
+    position: relative;
+    width: 31px;
+    height: 21px;
+    border-bottom: 3px solid var(--white-text);
+    display: none;
+}
+.btn_burger::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: var(--white-text);
+    position: absolute;
+    left: 0;
+    top: calc(50% + 1px);
+    transform: translateY(-50%);
+}
+.btn_burger::before {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: var(--white-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
 /*header    */
 header{
     background-color: var(--dark);
@@ -55,6 +91,7 @@ nav{
     font-weight: 600;
 }
 .header_list a{
+    font-family: var(--font-text);
     padding: var(--padding-link);
     transition: all .3s ease-in-out;
     border-radius: 7px;
@@ -186,7 +223,7 @@ main{
 }
 .hard,
 .soft{
-    width: calc(100% + 38px);
+    width: 100%;
     padding-left: 19px;
     text-align: center;
 }
@@ -271,8 +308,9 @@ main{
 .btn--project::after{
     content: "";
     position: absolute;
-    background-image: url("./svg/Arrow 1.svg");
-    background-size: cover;
+    background-image: url("./svg/arrow.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
     width: 46px;
     height: 23px;
     top: 33%;
@@ -376,4 +414,246 @@ main{
     100%{
         transform: translateY(-7px);
     }
+}
+/*mob*/
+@media (max-width: 1255px) {
+    .container{
+        padding: 0 25px;
+    }
+    .text,
+    .info-row{
+        font-size: 16px;
+    }
+
+    .about-info{
+        width: 45%;
+    }
+}
+@media (max-width: 1125px) {
+    .header_list {
+        gap: 35px;
+        font-size: 18px;
+    }
+    .info-row{
+        width: 100%;
+    }
+    .about {
+        padding: 27px 0 62px;
+    }
+    .about-btn{
+        flex-direction: column;
+    }
+    .about-down {
+        justify-content: center;
+    }
+    .about-text>.name,
+    .about-text>.sup-title{
+        margin-bottom: 0;
+    }
+    .about-up{
+        margin-bottom: 35px;
+    }
+    #skills-stack {
+        background-color: var(--dark);
+        padding: 45px 0;
+        margin-bottom: 65px;
+    }
+    .name{
+        font-size: 42px;
+    }
+    .title{
+        font-size: 46px;
+    }
+    .hard-list>li,
+    .soft-list>li,
+    .contacts_info_block_text{
+        font-size: 18px;
+    }
+    .hard-list {
+        margin-bottom: 40px;
+    }
+    .title--skills-stack {
+        margin-bottom: 25px;
+    }
+    .title--project {
+        margin-bottom: 40px;
+    }
+    .projects {
+        gap: 25px;
+        margin-bottom: 35px;
+    }
+    .project_picture {
+        width: calc(100% / 3 - 25px);
+        border-radius: 15px;
+    }
+    .sup-title--project {
+        margin: 70px 0 40px 0;
+    }
+    #contacts {
+        background-color: var(--dark);
+        padding: 50px 0;
+        margin: 0 0 65px 38px;
+    }
+    .contacts_svg {
+        width: 35px;
+        height: 35px;
+    }
+    .contacts_info_block {
+        gap: 25px;
+    }
+}
+@media (max-width: 800px) {
+    .sup-title {
+        font-size: 22px;
+        line-height: 40px;
+    }
+    nav {
+        padding: 15px 0;
+    }
+    .logo>svg{
+        scale: 0.8;
+    }
+    .hard-list>li{
+        padding: 0 20px;
+    }
+    .project_picture {
+        width: calc(100% / 2 - 25px);
+    }
+    .social_list {
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+    .contact-link {
+        width: 36px;
+        font-size: 32px;
+    }
+    .contacts_info_block--hide{
+        display: none;
+    }
+    .about-up {
+        gap: 40px;
+        margin-bottom: 50px;
+    }
+    .footer>p,
+    .footer>a{
+        font-size: 16px;
+    }
+    .footer_svg {
+        width: 25px;
+    }
+    .about-up{
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-text {
+        max-width: 100%;
+    }
+    .photo{
+        width: 65%;
+    }
+    .soft-list>li {
+        width: calc(100% / 2 - 15px);
+        font-size: 18px;
+    }
+    .about-down {
+        justify-content: space-between;
+    }
+    .button--color {
+        padding: 0 10px;
+        text-align: center;
+    }
+    .button--opacity {
+        padding: 0 25px;
+        text-align: center;
+    }
+    .header_list{
+        display: none;
+    }
+    .btn_burger,
+    .header_list--mobile{
+        display: block;
+    }
+    .mobile_menu {
+        transform: translateY(calc(-100% - 81px));
+        pointer-events: none;
+        position: absolute;
+        top: 81px;
+        width: 100%;
+        left: 0;
+        padding: 33px 25px;
+        background: var(--dark-light);
+        transition: all .5s ease-in-out;
+        display: flex;
+        justify-content: space-between;
+        z-index: -1;
+
+    }
+    .mobile_menu.is-active {
+        pointer-events: initial;
+        width: 100%;
+        left: 0;
+        transform: translateY(0cm);
+        z-index: 99;
+    }
+    .header_list--mobile{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+    }
+    .header_list--mobile>li{
+        display: flex;
+    }
+    .button{
+        font-size: 18px;
+    }
+    .btn--project {
+        padding: 12px 50px 12px 12px;
+        position: relative;
+    }
+    .btn--project::after {
+        width: 38px;
+        height: 14px;
+        top: 37%;
+        right: 3px;
+    }
+    
+}
+@media (max-width: 580px) {
+    .about-down {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .about-info {
+        width: 100%;
+    }
+    .info-row{
+        width: 100%;
+    }
+    .about-btn {
+        flex-direction: row;
+    }
+    .contacts_info {
+        margin: 40px 0;
+    }
+    .contacts_info_block {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .soft-list {
+        gap: 15px;
+    }
+    .photo{
+        width: 75%;
+    }
+    .text,
+    .info-row,
+    .hard-list>li,
+    .soft-list>li,
+    .contacts_info_block_text{
+        font-size: 14px;
+    }
+
 }
