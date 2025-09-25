@@ -13,7 +13,7 @@
             integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
             crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Portfolio SS</title>
 </head>
 <body>
@@ -62,14 +62,14 @@
                     <div class="about">
                         <div class="about-up">
                             <picture class="photo">
-                                <source srcset="./img/ss.png">
-                                <img class="photo-img" src="./img/ss.webp" alt="photo" width="244" height="325">
+                                <source srcset="./img/ss_photo.jpg">
+                                <img class="photo-img" src="./img/ss_photo.jpg" alt="photo">
                             </picture>
                             <div class="about-text">
-                                <h1 class="name">Shapran S</h1>
+                                <h1 class="name">I’m Serhii</h1>
                                 <p class="sup-title">frontend developer</p>
                                 <p class="text">
-                                    I am a Front-End Developer building comprehensive solutions from UI to deployment, integrating AI-powered tools to enhance development efficiency.
+                                    Hello, I have experience in developing websites and web applications of varying complexity. I write clean and semantic code (HTML, CSS, JS) using the BEM methodology. I have experience working with WordPress and use various additional technologies such as Pug, MJML, Sass, jQuery, Bootstrap, Swiper, and React. Additionally, I have experience in on-page SEO.
                                 </p>
                             </div>
                         </div>
@@ -77,14 +77,14 @@
                             <div class="about-info">
                                 <p class="info-row"><span>location:</span>Kyiv</p>
                                 <p class="info-row info-row--link" ><span>tel:</span><a  href="tel:+380673540335"> +38(067)-35-403-35</a></p>
-<!--                                <p class="info-row"><span>age:</span> <span id="age-value">30</span></p>-->
+                                <p class="info-row"><span>age:</span>30</p>
                                 <p class="info-row info-row--link" ><span>email:</span><a  href="mailto:sshaprans@gmail.com"> sshaprans@gmail.com</a></p>
                             </div>
                             <div class="about-btn">
-                                <a class="button" href="./CV_Serhii_Shapran.pdf" download>
+                                <a class="button button--color" href="S_Shapran_frontend_developer_cv.pdf" download>
                                     Download CV
                                 </a>
-                                <a class="button" href="./CV_Serhii_Shapran.pdf">
+                                <a class="button button--opacity" href="./S_Shapran_frontend_developer_cv.pdf">
                                     View CV
                                 </a>
                             </div>
@@ -92,10 +92,10 @@
                     </div>
                 </div>
             </section>
-            <section id="skills-stack" class="skills-stack">
+            <section id="skills-stack">
                 <div class="container">
                     <div class="hard">
-                        <h3 class="title">
+                        <h3 class="title title--skills-stack">
                             Skills Stack
                         </h3>
                         <ul class="hard-list">
@@ -190,47 +190,58 @@
             </section>
             <section id="projects">
                 <div class="container">
-                    <h3 class="title">
+                    <h3 class="title title--project">
                         Projects
                     </h3>
                     <div class="projects">
-                        <a class="project_picture" href="https://sshaprans.github.io/tower-defence/">
-                            <picture>
-                                <source srcset="./img/prod1.webp">
-                                <img class="project_img" src="./img/prod1.png" alt="tower defence" width="360" height="255">
-                            </picture>
-                        </a>
                         <a class="project_picture" href="https://www.zozulya-dev.com/">
                             <picture>
-                                <source srcset="./img/prod2.webp">
-                                <img class="project_img" src="./img/prod2.png" alt="photo" width="360" height="255">
+                                <source srcset="./img/zozulya.jpg">
+                                <img class="project_img" src="./img/zozulya.jpg" alt="photo">
                             </picture>
                         </a>
 
                         <a class="project_picture" href="http://www.iogu.gov.ua/">
                             <picture>
-                                <source srcset="./img/prod3.webp">
-                                <img class="project_img" src="./img/prod3.png" alt="photo" width="360" height="255">
+                                <source srcset="./img/igou.jpg">
+                                <img class="project_img" src="./img/igou.jpg" alt="photo">
                             </picture>
                         </a>
                         <a class="project_picture" href="https://solar-hub.com.ua/">
                             <picture>
-                                <source srcset="./img/prod4.webp">
-                                <img class="project_img" src="./img/prod4.png" alt="photo" width="360" height="255">
+                                <source srcset="./img/soalrhub.jpg">
+                                <img class="project_img" src="./img/soalrhub.jpg" alt="photo">
                             </picture>
                         </a>
                         <a class="project_picture" href="https://sshaprans.github.io/sto/">
                             <picture >
-                                <source srcset="./img/prod5.webp">
-                                <img class="project_img" src="./img/prod5.png" alt="photo" width="360" height="255">
+                                <source srcset="./img/1.webp">
+                                <img class="project_img" src="./img/1.png" alt="photo">
                             </picture>
                         </a>
+
+
                         <a class="project_picture" href="https://sshaprans.github.io/arsenal-trucking/">
                             <picture>
-                                <source srcset="./img/prod6.webp">
-                                <img class="project_img" src="./img/prod6.png" alt="photo" width="360" height="255">
+                                <source srcset="./img/3.webp">
+                                <img class="project_img" src="./img/3.png" alt="photo">
                             </picture>
                         </a>
+                        <a class="project_picture" href="https://sshaprans.github.io/lex_site/">
+                            <picture>
+                                <source srcset="./img/2.webp">
+                                <img class="project_img" src="./img/2.png" alt="photo">
+                            </picture>
+                        </a>
+
+                    </div>
+                    <div class="project_down">
+                        <a href="#" class="button button--color btn--project">
+                            View more
+                        </a>
+                        <h3 class="sup-title sup-title--project">
+                            Available For Freelance!
+                        </h3>
                     </div>
                 </div>
             </section>
@@ -328,14 +339,16 @@
         </main>
     </div>
 
+
     <footer id="footer">
         <div class="container">
             <div class="footer">
-                <p>Copyright © <span id="copyright-year">2023</span> created by SS</p>
+                <p>Copyright © 2023 created by SS </p>
                 <p>Kyiv, Ukraine</p>
                 <a  href="#header">
                     <?xml version="1.0" ?><svg class="footer_svg" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M54.63 246.6L192 109.3l137.4 137.4C335.6 252.9 343.8 256 352 256s16.38-3.125 22.62-9.375c12.5-12.5 12.5-32.75 0-45.25l-160-160c-12.5-12.5-32.75-12.5-45.25 0l-160 160c-12.5 12.5-12.5 32.75 0 45.25S42.13 259.1 54.63 246.6zM214.6 233.4c-12.5-12.5-32.75-12.5-45.25 0l-160 160c-12.5 12.5-12.5 32.75 0 45.25s32.75 12.5 45.25 0L192 301.3l137.4 137.4C335.6 444.9 343.8 448 352 448s16.38-3.125 22.62-9.375c12.5-12.5 12.5-32.75 0-45.25L214.6 233.4z"/></svg>
                 </a>
+                <a href="./Тема2.pdf" >for me</a>
             </div>
         </div>
     </footer>
