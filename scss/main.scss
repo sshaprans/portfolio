@@ -496,6 +496,7 @@ main {
           object-fit: cover;
           display: block;
           border-radius: $border-radius-md;
+
         }
 
         &_down {
@@ -537,7 +538,6 @@ main {
         display: flex;
         align-items: center;
         margin: clamp(30px, -7.222px + 6.944vw, 90px) 0 clamp(30px, 2.778px + 6.944vw, 100px);
-        //clamp:(8px, -17.5px + 3.75vw, 35px);
         @include media-max(680px){
           flex-direction: column;
           justify-content: flex-start;
