@@ -39,7 +39,7 @@ body {
   pointer-events: none;
   z-index: 999;
   background: radial-gradient(
-                  circle 180px at var(--cursorX) var(--cursorY),
+                  circle 160px at var(--cursorX) var(--cursorY),
                   rgba(255, 255, 255, 0.07),
                   transparent 90%
   );
@@ -366,29 +366,127 @@ main {
   #projects{
 
     .title{
-      margin-bottom: 85px;
+      margin-bottom: clamp(40px, -2.5px + 6.25vw, 85px);
     }
     .projects {
       display: flex;
       flex-wrap: wrap;
-      gap: 55px;
+      gap: clamp(20px, 1.111px + 2.778vw, 40px);
       justify-content: space-between;
-      margin-bottom: 75px;
+      margin-bottom: clamp(30px, -12.5px + 6.25vw, 75px);
+      @include media-max(680px){
+        justify-content: center;
+      }
 
       .project{
+
+        &_name{
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: translateY(-100%);
+          width: fit-content;
+          background: $color-accent;
+          color: $color-white;
+          padding: 8px 12px;
+          border-radius: $border-radius-sm;
+          transition: $transition-main;
+          font-size: clamp(14px, 10.222px + 0.556vw, 18px);
+          @include media-max(680px){
+            top: 8px;
+            padding: 6px 8px;
+            transform: translate(0, -50%);
+          }
+        }
+        &_technology{
+          font-size: clamp(14px, 10.222px + 0.556vw, 18px);
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          transform: translateY(100%);
+          width: 100%;
+          background: rgba(43, 42, 43, 0.85);
+          color: $color-white;
+          padding: 8px 12px;
+          border-radius: $border-radius-sm;
+          transition: $transition-main;
+          @include media-max(680px){
+            transform: translateY(0);
+
+          }
+        }
+        &_demo{
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translate(-100%, -50%);
+          background: $color-dark;
+          color: $color-white;
+          font-size: 14px;
+          padding:  6px 10px;;
+          text-transform: uppercase;
+          transition: $transition-main;
+          @include media-max(680px){
+            transform: translate(0, -50%);
+          }
+        }
+        &_git{
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translate(100%, -50%);
+          background: $color-dark;
+          color: $color-white;
+          font-size: 14px;
+          padding: 6px 10px;
+          text-transform: uppercase;
+          transition: $transition-main;
+          @include media-max(680px){
+            transform: translate(0, -50%);
+          }
+        }
+
         &_picture {
-          width: calc(100% / 3 - 55px);
+          width: calc(30% - 25px);
           position: relative;
           transition: $transition-main;
           border-radius: $border-radius-md;
-
-          &:hover {
-            transform: scale(1.03) translateY(-10px);
-            box-shadow: -10px 15px 50px 0 rgba($color-white, 0.31), 10px 10px 50px 0 rgba($color-white, 0.25);
+          overflow: hidden;
+          @include media-max(1150px){
+            width: calc(50% - 25px);
           }
+          @include media-max(680px){
+            width: 100%;
+            max-width: 360px;
+          }
+
+
+          @include media-min(680px){
+            &:hover {
+              transform: scale(1.03) translateY(-10px);
+              box-shadow: -10px 15px 20px 0 rgba($color-white, 0.27), 10px 10px 50px 0 rgba($color-white, 0.21);
+              @include media-max(680px){
+                display: none;
+              }
+              .project_technology,
+              .project_name,
+              .project_demo,
+              .project_git{
+                transform: translate(0);
+              }
+              .project_demo:hover,
+              .project_git:hover{
+                transform: scale(1.2);
+              }
+            }
+          }
+
+
+
 
           picture {
             width: 100%;
+            height: auto;
           }
         }
 
@@ -407,44 +505,63 @@ main {
     }
 
     .sup-title--project {
-      margin: 145px 0 81px 0;
+      margin: clamp(70px, 22.778px + 6.944vw, 120px) 0 clamp(40px, 1.278px + 5.694vw, 81px) 0;
     }
   }
 
   #contacts {
     background-color: $color-dark;
-    padding: 102px 0;
-    margin: 0 0 133px 38px;
+    padding: clamp(40px, -35.556px + 11.111vw, 120px) 0;
+    margin: 0 0 clamp(70px, 13.333px + 8.333vw, 130px) clamp(6px, -24.222px + 4.444vw, 38px);
     border-radius: $border-radius-lg 0 0 $border-radius-lg;
 
     .contacts {
       padding-right: 19px;
       text-align: center;
+      @include media-max(680px){
+        padding-right: 6px;
+      }
 
       &_svg {
         fill: $color-white;
         width: 55px;
         height: 55px;
         object-fit: cover;
+        @include media-max(680px){
+          width: 32px;
+          height: auto;
+        }
       }
 
       &_info {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        margin: 90px 0 100px;
+        margin: clamp(30px, -7.222px + 6.944vw, 90px) 0 clamp(30px, 2.778px + 6.944vw, 100px);
+        //clamp:(8px, -17.5px + 3.75vw, 35px);
+        @include media-max(680px){
+          flex-direction: column;
+          justify-content: flex-start;
+        }
 
         &_block {
           display: flex;
           align-items: center;
-          gap: clamp(20px, -8.333px + 4.167vw, 50px);
+          gap: clamp(10px, -27.778px + 5.556vw, 50px);
           text-align: left;
+          @include media-max(880px){
+            flex-direction: column;
+          }
+          @include media-max(680px){
+            flex-direction: row;
+          }
 
           &_text {
             display: flex;
             flex-direction: column;
             gap: clamp(8px, 4.222px + 0.556vw, 12px);
-
+            @include media-max(680px){
+              text-align: center;
+            }
             p, a {
               font-family: $font-primary;
             }
@@ -463,15 +580,18 @@ main {
 
       .social_list {
         display: flex;
-        gap: clamp(20px, -8.333px + 4.167vw, 50px);
+        gap: clamp(15px, -18.056px + 4.861vw, 50px);
         justify-content: center;
         align-items: center;
+        @include media-max(680px){
+          flex-wrap: wrap;
+        }
 
         .contact-link {
           display: flex;
-          font-size: 46px;
+          font-size: clamp(22px, 18.222px + 0.556vw, 26px);
           fill: $color-white;
-          width: clamp(36px, 22.778px + 1.944vw, 50px);
+          width: clamp(28px, 7.222px + 3.056vw, 50px);
           transition: $transition-main;
 
           &:hover {

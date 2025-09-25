@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     listItems.forEach((item, index) => {
-                        const delay = index * 100;
+                        const delay = index * 60;
                         setTimeout(() => {
                             item.classList.add('visible');
                         }, delay);
@@ -63,20 +63,16 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(listElement);
     };
 
-    // Знаходимо всі списки, які треба анімувати
     const animatedLists = document.querySelectorAll('.hard-list, .soft-list');
 
-    // Застосовуємо спостерігача до кожного знайденого списку
     animatedLists.forEach(createListObserver);
 
 
-    // --- КОД ДЛЯ ЕФЕКТУ ЛІХТАРИКА ---
     const spotlight = document.createElement('div');
     spotlight.classList.add('spotlight');
     document.body.appendChild(spotlight);
 
     window.addEventListener('mousemove', (e) => {
-        // Оновлюємо позицію ліхтарика через CSS змінні
         spotlight.style.setProperty('--cursorX', e.clientX + 'px');
         spotlight.style.setProperty('--cursorY', e.clientY + 'px');
     });

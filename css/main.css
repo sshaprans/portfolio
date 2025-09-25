@@ -93,7 +93,7 @@ body {
   height: 100vh;
   pointer-events: none;
   z-index: 999;
-  background: radial-gradient(circle 180px at var(--cursorX) var(--cursorY), rgba(255, 255, 255, 0.07), transparent 90%);
+  background: radial-gradient(circle 160px at var(--cursorX) var(--cursorY), rgba(255, 255, 255, 0.07), transparent 90%);
 }
 @media (max-width: 680px) {
   .spotlight {
@@ -140,7 +140,7 @@ header nav {
   border-radius: clamp(3px, -0.778px + 0.556vw, 7px);
 }
 .header_list a:hover {
-  background-color: #2B2A2B;
+  background-color: rgb(43, 42, 43);
 }
 
 .mobile_menu,
@@ -162,7 +162,7 @@ header nav {
   width: 100%;
   left: 0;
   padding: 33px 25px;
-  background: #2B2A2B;
+  background: rgb(43, 42, 43);
   transition: all 0.5s ease-in-out;
   display: flex;
   justify-content: space-between;
@@ -205,7 +205,7 @@ header nav {
 }
 
 main {
-  background: linear-gradient(180deg, #212021 0%, #2B2A2B 18.21%);
+  background: linear-gradient(180deg, #212021 0%, rgb(43, 42, 43) 18.21%);
 }
 main .about {
   padding: clamp(20px, -27.222px + 6.944vw, 70px) 0 clamp(76px, 34.444px + 6.111vw, 120px);
@@ -359,7 +359,7 @@ main .skills-stack .hard-list {
 main .skills-stack .hard-list li {
   padding: 12px 40px;
   border-radius: clamp(3px, -0.778px + 0.556vw, 7px);
-  background-color: #2B2A2B;
+  background-color: rgb(43, 42, 43);
   color: #fff;
   font-family: "Inter", sans-serif;
   font-size: clamp(16px, 8.842px + 1.053vw, 24px);
@@ -410,27 +410,136 @@ main .skills-stack .soft-list li.visible {
   transform: scale(1);
 }
 main #projects .title {
-  margin-bottom: 85px;
+  margin-bottom: clamp(40px, -2.5px + 6.25vw, 85px);
 }
 main #projects .projects {
   display: flex;
   flex-wrap: wrap;
-  gap: 55px;
+  gap: clamp(20px, 1.111px + 2.778vw, 40px);
   justify-content: space-between;
-  margin-bottom: 75px;
+  margin-bottom: clamp(30px, -12.5px + 6.25vw, 75px);
+}
+@media (max-width: 680px) {
+  main #projects .projects {
+    justify-content: center;
+  }
+}
+main #projects .projects .project_name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  width: fit-content;
+  background: #C26047;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: clamp(3px, -0.778px + 0.556vw, 7px);
+  transition: all 0.3s ease-in-out;
+  font-size: clamp(14px, 10.222px + 0.556vw, 18px);
+}
+@media (max-width: 680px) {
+  main #projects .projects .project_name {
+    top: 8px;
+    padding: 6px 8px;
+    transform: translate(0, -50%);
+  }
+}
+main #projects .projects .project_technology {
+  font-size: clamp(14px, 10.222px + 0.556vw, 18px);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
+  width: 100%;
+  background: rgba(43, 42, 43, 0.85);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: clamp(3px, -0.778px + 0.556vw, 7px);
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 680px) {
+  main #projects .projects .project_technology {
+    transform: translateY(0);
+  }
+}
+main #projects .projects .project_demo {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  background: #212021;
+  color: #fff;
+  font-size: 14px;
+  padding: 6px 10px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 680px) {
+  main #projects .projects .project_demo {
+    transform: translate(0, -50%);
+  }
+}
+main #projects .projects .project_git {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(100%, -50%);
+  background: #212021;
+  color: #fff;
+  font-size: 14px;
+  padding: 6px 10px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 680px) {
+  main #projects .projects .project_git {
+    transform: translate(0, -50%);
+  }
 }
 main #projects .projects .project_picture {
-  width: calc(33.3333333333% - 55px);
+  width: calc(30% - 25px);
   position: relative;
   transition: all 0.3s ease-in-out;
   border-radius: clamp(12px, 4.444px + 1.111vw, 20px);
+  overflow: hidden;
 }
-main #projects .projects .project_picture:hover {
-  transform: scale(1.03) translateY(-10px);
-  box-shadow: -10px 15px 50px 0 rgba(255, 255, 255, 0.31), 10px 10px 50px 0 rgba(255, 255, 255, 0.25);
+@media (max-width: 1150px) {
+  main #projects .projects .project_picture {
+    width: calc(50% - 25px);
+  }
+}
+@media (max-width: 680px) {
+  main #projects .projects .project_picture {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+@media (min-width: 680px) {
+  main #projects .projects .project_picture:hover {
+    transform: scale(1.03) translateY(-10px);
+    box-shadow: -10px 15px 20px 0 rgba(255, 255, 255, 0.27), 10px 10px 50px 0 rgba(255, 255, 255, 0.21);
+  }
+}
+@media (min-width: 680px) and (max-width: 680px) {
+  main #projects .projects .project_picture:hover {
+    display: none;
+  }
+}
+@media (min-width: 680px) {
+  main #projects .projects .project_picture:hover .project_technology,
+  main #projects .projects .project_picture:hover .project_name,
+  main #projects .projects .project_picture:hover .project_demo,
+  main #projects .projects .project_picture:hover .project_git {
+    transform: translate(0);
+  }
+  main #projects .projects .project_picture:hover .project_demo:hover,
+  main #projects .projects .project_picture:hover .project_git:hover {
+    transform: scale(1.2);
+  }
 }
 main #projects .projects .project_picture picture {
   width: 100%;
+  height: auto;
 }
 main #projects .projects .project_img {
   width: 100%;
@@ -443,17 +552,22 @@ main #projects .projects .project_down {
   text-align: center;
 }
 main #projects .sup-title--project {
-  margin: 145px 0 81px 0;
+  margin: clamp(70px, 22.778px + 6.944vw, 120px) 0 clamp(40px, 1.278px + 5.694vw, 81px) 0;
 }
 main #contacts {
   background-color: #212021;
-  padding: 102px 0;
-  margin: 0 0 133px 38px;
+  padding: clamp(40px, -35.556px + 11.111vw, 120px) 0;
+  margin: 0 0 clamp(70px, 13.333px + 8.333vw, 130px) clamp(6px, -24.222px + 4.444vw, 38px);
   border-radius: clamp(16px, -2.889px + 2.778vw, 36px) 0 0 clamp(16px, -2.889px + 2.778vw, 36px);
 }
 main #contacts .contacts {
   padding-right: 19px;
   text-align: center;
+}
+@media (max-width: 680px) {
+  main #contacts .contacts {
+    padding-right: 6px;
+  }
 }
 main #contacts .contacts_svg {
   fill: #fff;
@@ -461,22 +575,48 @@ main #contacts .contacts_svg {
   height: 55px;
   object-fit: cover;
 }
+@media (max-width: 680px) {
+  main #contacts .contacts_svg {
+    width: 32px;
+    height: auto;
+  }
+}
 main #contacts .contacts_info {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin: 90px 0 100px;
+  margin: clamp(30px, -7.222px + 6.944vw, 90px) 0 clamp(30px, 2.778px + 6.944vw, 100px);
+}
+@media (max-width: 680px) {
+  main #contacts .contacts_info {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 }
 main #contacts .contacts_info_block {
   display: flex;
   align-items: center;
-  gap: clamp(20px, -8.333px + 4.167vw, 50px);
+  gap: clamp(10px, -27.778px + 5.556vw, 50px);
   text-align: left;
+}
+@media (max-width: 880px) {
+  main #contacts .contacts_info_block {
+    flex-direction: column;
+  }
+}
+@media (max-width: 680px) {
+  main #contacts .contacts_info_block {
+    flex-direction: row;
+  }
 }
 main #contacts .contacts_info_block_text {
   display: flex;
   flex-direction: column;
   gap: clamp(8px, 4.222px + 0.556vw, 12px);
+}
+@media (max-width: 680px) {
+  main #contacts .contacts_info_block_text {
+    text-align: center;
+  }
 }
 main #contacts .contacts_info_block_text p, main #contacts .contacts_info_block_text a {
   font-family: "Inter", sans-serif;
@@ -490,15 +630,20 @@ main #contacts .contacts_info_block_text a:hover {
 }
 main #contacts .contacts .social_list {
   display: flex;
-  gap: clamp(20px, -8.333px + 4.167vw, 50px);
+  gap: clamp(15px, -18.056px + 4.861vw, 50px);
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 680px) {
+  main #contacts .contacts .social_list {
+    flex-wrap: wrap;
+  }
+}
 main #contacts .contacts .social_list .contact-link {
   display: flex;
-  font-size: 46px;
+  font-size: clamp(22px, 18.222px + 0.556vw, 26px);
   fill: #fff;
-  width: clamp(36px, 22.778px + 1.944vw, 50px);
+  width: clamp(28px, 7.222px + 3.056vw, 50px);
   transition: all 0.3s ease-in-out;
 }
 main #contacts .contacts .social_list .contact-link:hover {
@@ -506,7 +651,7 @@ main #contacts .contacts .social_list .contact-link:hover {
 }
 
 #footer {
-  background: linear-gradient(180deg, #212021 0%, #2B2A2B 100%);
+  background: linear-gradient(180deg, #212021 0%, rgb(43, 42, 43) 100%);
   padding: clamp(20px, 1.111px + 2.778vw, 40px) 0;
 }
 #footer .footer {
